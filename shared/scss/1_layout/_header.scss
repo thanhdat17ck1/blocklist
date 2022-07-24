@@ -1,0 +1,104 @@
+/* Header
+------------------------------------------------------------*/
+.c-header {
+  position: fixed;
+  width: 100%;
+  z-index: 99;
+
+  &__inner {
+    padding: 29px 165px 29px 130px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__nav {
+    ul {
+      display: flex;
+      align-items: center;
+
+      li {
+        padding: 0 8px;
+        position: relative;
+
+        +li {
+          margin-left: 19px;
+        }
+
+        &.is-active {
+          &::after {
+            width: 100%;
+          }
+        }
+
+        &::after {
+          background-color: #fff;
+          bottom: -5px;
+          left: 0;
+          content: "";
+          position: absolute;
+          height: 2px;
+          width: 0;
+          transition: 0.3s ease-out;
+        }
+
+        &:hover {
+          &::after {
+            width: 100%;
+          }
+        }
+
+        &.apply {
+          &::after {
+            content: unset;
+          }
+        }
+      }
+
+      .apply {
+        background-color: #dc2219;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding: 0 20px;
+        height: 36px;
+        border-radius: 99px;
+      }
+    }
+  }
+
+  &__logo {
+    width: 210px;
+
+    img {
+      width: 100%;
+    }
+
+    .logo1 {
+      display: none;
+    }
+  }
+
+  &.is-scroll {
+    background-color: #FFF;
+
+    .logo {
+      display: none;
+    }
+
+    .logo1 {
+      display: block;
+    }
+
+    ul {
+      li {
+        color: #000;
+
+        &::after {
+          background-color: #000;
+        }
+      }
+    }
+  }
+}

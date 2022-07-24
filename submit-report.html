@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./shared/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <header class="c-header">
+        <div class="c-header__inner">
+            <h1 class="c-header__logo">
+                <a href="#">
+                    <img src="./shared/images/logo.svg" class="logo" alt="the block list">
+                    <img src="./shared/images/logo1.svg" class="logo1" alt="the block list">
+                </a>
+            </h1>
+            <nav class="c-header__nav">
+                <ul>
+                    <li class="is-active">
+                        <a href="#">Home</a>
+                    </li>
+                    <li>
+                        <a href="#">About Us</a>
+                    </li>
+                    <li>
+                        <a href="#">News</a>
+                    </li>
+                    <li>
+                        <a href="#">Contact Us</a>
+                    </li>
+                    <li class="apply">
+                        <a href="#">Apply Report</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main class="p-form">
+        <section class="p-form__inner">
+            <div class="c-heading">
+                <h2>Submit Report</h2>
+                <p>Get in touch with BlockList</p>
+            </div>
+            <div class="l-container">
+                <form action="" method="POST" class="c-form">
+                    <div class="c-form__row c-form__row--error">
+                        <label for="fname">Your name</label>
+                        <input type="text" id="name" name="name" value="" placeholder="Enter your name">
+                        <span>This field cannot be left blank</span>
+                    </div>
+                    <div class="c-form__row">
+                        <label for="fname">Your Email</label>
+                        <input type="email" id="email" name="email" value="" placeholder="Enter mail">
+                    </div>
+                    <div class="c-form__row">
+                        <label for="fname">Subject</label>
+                        <input type="text" id="subject" name="subject" value="" placeholder="NFT Items">
+                    </div>
+                    <div class="c-form__row">
+                        <label for="fname">Message</label>
+                        <textarea name="message" id="message" placeholder="Enter your message"></textarea>
+                    </div>
+                    <input type="submit" value="Send message" id="submit" class="c-form__submit">
+                </form>
+            </div>
+        </section>
+    </main>
+    <footer class="c-footer">
+        <div class="c-footer__inner">
+            <div class="l-container l-container--1">
+                <div class="c-footer__info">
+                    <div class="c-footer__left">
+                        Disclaimer Đây Là Dòng Mô Tả Gì Đó Về Blocklist
+                        <div class="c-footer__social">
+                            <a href="#"><img src="./shared/images/icon-fb.svg" width="9.25" alt="#"></a>
+                            <a href="#"><img src="./shared/images/icon-ins.svg" width="19.2" alt="#"></a>
+                            <a href="#"><img src="./shared/images/icon-youtube.svg" width="19.2" alt="#"></a>
+                            <a href="#"><img src="./shared/images/icon-tw.svg" width="19.2" alt="#"></a>
+                        </div>
+                    </div>
+                    <div class="c-footer__mid">
+                        <a href="#">
+                            <img src="./shared/images/logo2.svg" width="156" alt="#">
+                        </a>
+                    </div>
+                    <div class="c-footer__right">
+                        <ul>
+                            <li>
+                                <a href="#">About Us</a>
+                            </li>
+                            <li>
+                                <a href="#">FAQ</a>
+                            </li>
+                            <li>
+                                <a href="#">Carrer</a>
+                            </li>
+                            <li>
+                                <a href="#">Contact Us</a>
+                            </li>
+                            <li>
+                                <a href="#">Appy Report</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="c-footer__copyright l-container l-container--1">
+            ©2022 Rockie.com. All rights reserved. Terms of Service | Privacy Terms
+        </div>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.min.js"></script>
+    <script>
+        function openCity(evt, cityName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tablinks");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+            document.getElementById(cityName).style.display = "block";
+            // evt.currentTarget.className += " active";
+        }
+    </script>
+    <script src="./shared/scripts/scripts.js"></script>
+</body>
+
+</html>

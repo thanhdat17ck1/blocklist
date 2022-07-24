@@ -1,0 +1,116 @@
+/*------------------------------------------------------------
+Css of home page
+------------------------------------------------------------*/
+.p-top {
+  padding-top: 52px;
+  background: url("./../images/home/bg.png") no-repeat center;
+  background-size: auto;
+  background-position-y: 102px;
+  margin-bottom: 110px;
+
+  &__inner {
+    margin-top: 107px;
+  }
+
+  h2 {
+    margin-top: 43px;
+    font-size: 6.4rem;
+    line-height: 72px;
+    text-align: center;
+    letter-spacing: -0.02em;
+    font-weight: 700;
+  }
+
+  .c-form-search {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 43px;
+    width: 367px;
+  }
+
+  .c-tab {
+    margin-top: 108px;
+  }
+
+
+}
+
+.p-search {
+  margin-bottom: 137px;
+
+  .l-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 31px;
+  }
+
+  .c-form-search {
+    width: 360px;
+  }
+
+  &__left {
+    width: calc(100% - 342px);
+    padding-right: 126px;
+
+    &__content {
+      margin-top: 27px;
+
+      .results {
+        font-weight: 700;
+        line-height: 24px;
+      }
+
+      .c-news {
+        margin-top: 31px;
+      }
+
+      .c-load-more {
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 40px;
+        position: relative;
+        left: 9px;
+      }
+    }
+  }
+}
+
+.p-form {
+  margin-bottom: 118px;
+
+  &__inner {
+    margin-top: 60px;
+
+
+  }
+}
+
+.p-error {
+  margin-bottom: 139px;
+
+  &__inner {
+    text-align: center;
+    margin-top: 120px;
+  }
+
+  .c-heading {
+    margin-top: 44px;
+  }
+
+  a {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width: 254px;
+    height: 52px;
+    background: #DC2219;
+    border-radius: 99px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 24px;
+  }
+}

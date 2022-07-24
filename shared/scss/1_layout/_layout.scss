@@ -1,0 +1,25 @@
+/* layout
+------------------------------------------------------------*/
+body {
+  font-family: $main-fonts;
+  font-size: 1.6rem;
+  background-color: #141416;
+  color: #fff;
+  font-weight: 400;
+}
+
+//-------------------------------------------------------
+main {
+  // padding: 0px 0 100px;
+  padding-top: 106px;
+}
+
+//-------------------------------------------------------
+.l-container {
+  max-width: 1410px;
+  margin: 0 auto;
+
+  &--1 {
+    max-width: 1418px;
+  }
+}
