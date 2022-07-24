@@ -3,6 +3,10 @@ $(document).ready(function () {
     $(".c-tab__link").removeClass("is-active");
     $(this).addClass("is-active");
   });
+  $(".c-detail__link").on("click", function () {
+    $(".c-detail__link").removeClass("is-active");
+    $(this).addClass("is-active");
+  });
 });
 
 $(document).ready(function () {
@@ -26,14 +30,19 @@ $(document).scroll(function () {
 });
 
 function openCity(evt, cityName) {
-  var i, tabcontent, tablinks;
+  var i, tabcontent, tabcontent1, tablinks;
   tabcontent = document.getElementsByClassName("tabcontent");
   for (i = 0; i < tabcontent.length; i++) {
     tabcontent[i].style.display = "none";
   }
-  tablinks = document.getElementsByClassName("tablinks");
-  for (i = 0; i < tablinks.length; i++) {
-    tablinks[i].className = tablinks[i].className.replace(" active", "");
+
+  tabcontent1 = document.getElementsByClassName("tabcontent1");
+  for (i = 0; i < tabcontent1.length; i++) {
+    tabcontent1[i].style.display = "none";
   }
+  // tablinks = document.getElementsByClassName("tablinks");
+  // for (i = 0; i < tablinks.length; i++) {
+  //   tablinks[i].className = tablinks[i].className.replace(" active", "");
+  // }
   document.getElementById(cityName).style.display = "block";
 }
