@@ -78,7 +78,7 @@
         +li {
           margin-left: 19px;
 
-          @include mq(xl, max) {
+          @include mq(tab, max) {
             margin-left: 0;
           }
         }
