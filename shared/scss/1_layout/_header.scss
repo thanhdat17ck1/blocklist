@@ -159,6 +159,17 @@
 
   &.is-scroll {
     background-color: #FFF;
+    z-index: 999999;
+    top: 0 !important;
+    min-height: 50px;
+    box-shadow: 0 3px 6px 3px rgb(0 0 0 / 6%);
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation-name: fadeInDown;
+    animation-name: fadeInDown;
+    background: #fff !important;
 
     .logo {
       display: none;
