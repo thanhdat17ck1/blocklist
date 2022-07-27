@@ -29,6 +29,15 @@ $(document).scroll(function () {
   }
 });
 
+$(document).ready(function () {
+  $(".c-burger").click(function () {
+    $(this).toggleClass("is-active");
+    $(".c-header__nav").toggleClass("is-active");
+    $("body").toggleClass("is-active");
+    $(".c-header__logo").toggleClass("is-active");
+  });
+});
+
 function openCity(evt, cityName) {
   var i, tabcontent, tabcontent1, tablinks;
   tabcontent = document.getElementsByClassName("tabcontent");

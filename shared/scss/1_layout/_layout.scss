@@ -6,6 +6,10 @@ body {
   background-color: #141416;
   color: #fff;
   font-weight: 400;
+
+  &.is-active {
+    overflow: hidden;
+  }
 }
 
 //-------------------------------------------------------
@@ -21,5 +25,15 @@ main {
 
   &--1 {
     max-width: 1418px;
+
+    @include mq(xxl, max) {
+      padding-left: 40px;
+      padding-right: 40px;
+    }
+
+    @include mq(md, max) {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
   }
 }

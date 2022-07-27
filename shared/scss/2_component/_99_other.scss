@@ -4,3 +4,15 @@ other
 
 /*
 ------------------------------------------------------------*/
+
+.logo-main {
+    width: 156px;
+
+    @include mq(lg, max) {
+        width: 138px;
+    }
+
+    @include mq(sm, max) {
+        width: 116px;
+    }
+}

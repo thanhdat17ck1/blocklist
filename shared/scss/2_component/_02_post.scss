@@ -1,11 +1,28 @@
 .c-post {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 40px 0;
+  gap: 40px 28px;
+  max-width: 1410px;
+  margin: auto;
+
+  @include mq(xxl, max) {
+    justify-content: space-between;
+  }
+
+  @include mq(md, max) {
+    gap: 40px 0;
+  }
 
   &__item {
     width: 32%;
+
+    @include mq(xxl, max) {
+      width: 48%;
+    }
+
+    @include mq(sm, max) {
+      width: 100%;
+    }
   }
 
   &__img {
@@ -15,6 +32,14 @@
     overflow: hidden;
     display: block;
     transition: .3s;
+
+    @include mq(lg, max) {
+      height: 200px;
+    }
+
+    @include mq(md, max) {
+      height: 175px;
+    }
 
     &:hover {
       img {
@@ -33,28 +58,39 @@
     margin-top: 32px;
 
     span {
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-      align-items: center;
-      padding: 4px 12px;
       background: #dc2219;
       border-radius: 4px;
       width: 63px;
+      height: 28px;
+      line-height: 28px;
+      text-align: center;
       font-size: 1.2rem;
       font-weight: 700;
       letter-spacing: 0.1em;
       text-transform: uppercase;
-      height: 28px;
+      display: block;
+
+      @include sp {
+        font-size: 1rem;
+        width: 50px;
+        height: 20px;
+        line-height: 20px;
+      }
     }
 
     a {
       font-weight: 700;
       font-size: 2.4rem;
-      line-height: 32px;
+      line-height: 1.35;
       margin-top: 16px;
       margin-bottom: 20px;
       display: block;
+
+      @include sp {
+        font-size: 1.8rem;
+        margin-top: 12px;
+        margin-bottom: 10px;
+      }
     }
 
     time {
@@ -62,6 +98,10 @@
       font-weight: 400;
       font-size: 14px;
       line-height: 24px;
+
+      @include mq(md, max) {
+        font-size: 1.2rem;
+      }
     }
   }
 }

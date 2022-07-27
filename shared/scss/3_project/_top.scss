@@ -4,9 +4,13 @@ Css of home page
 .p-top {
   padding-top: 52px;
   background: url("./../images/home/bg.png") no-repeat center;
-  background-size: auto;
+  background-size: contain;
   background-position-y: 102px;
   margin-bottom: 110px;
+
+  @include mq(md, max) {
+    margin-bottom: 70px;
+  }
 
   &__inner {
     margin-top: 107px;
@@ -15,10 +19,25 @@ Css of home page
   h2 {
     margin-top: 43px;
     font-size: 6.4rem;
-    line-height: 72px;
+    line-height: 1.125;
     text-align: center;
     letter-spacing: -0.02em;
     font-weight: 700;
+
+    @include mq(lg, max) {
+      font-size: 5rem;
+    }
+
+    @include mq(md, max) {
+      font-size: 3.8rem;
+    }
+
+    @include mq(sm, max) {
+      max-width: calc(100% - 40px);
+      margin-left: auto;
+      margin-right: auto;
+      font-size: 3rem;
+    }
   }
 
   .c-form-search {
@@ -26,10 +45,43 @@ Css of home page
     margin-right: auto;
     margin-top: 43px;
     width: 367px;
+
+    @include mq(sm, max) {
+      max-width: calc(100% - 40px);
+    }
   }
 
   .c-tab {
     margin-top: 108px;
+
+    @include mq(md, max) {
+      margin-top: 60px;
+    }
+
+    @include mq(sm, max) {
+      max-width: calc(100% - 40px);
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
+  .tabcontent {
+    @include mq(xxl, max) {
+      max-width: 928px;
+      margin: auto;
+    }
+
+    @include mq(lg, max) {
+      max-width: calc(100% - 80px);
+    }
+
+    @include mq(md, max) {
+      max-width: calc(100% - 80px);
+    }
+
+    @include mq(sm, max) {
+      max-width: calc(100% - 40px);
+    }
   }
 
 
