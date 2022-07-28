@@ -1,10 +1,14 @@
 .c-team {
     margin-top: 50px;
 
+    .c-heading {
+        margin-bottom: 40px;
+    }
+
     &__list {
         margin-top: 40px;
         display: flex;
-        justify-content: space-between;
+        gap: 0 114px;
     }
 
     &__member {
@@ -32,6 +36,7 @@
             font-weight: 600;
             font-size: 20px;
             line-height: 30px;
+            font-family: $poppins-fonts;
         }
 
         span {

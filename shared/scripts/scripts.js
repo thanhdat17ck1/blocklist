@@ -20,6 +20,20 @@ $(document).ready(function () {
   });
 });
 
+//read more
+$(document).ready(function () {
+  $(".readMore span").click(function () {
+    $(this).parents(".tabcontent1").toggleClass("read-active");
+    $(".tabcontent1.test .content").slideDown("slow");
+
+    if ($(".tabcontent1").hasClass("read-active")) {
+      $(this).text("Show");
+    } else {
+      $(this).text("Read More");
+    }
+  });
+});
+
 $(document).scroll(function () {
   if ($(document).scrollTop() > 0) {
     $(".c-header").addClass("is-scroll");
@@ -38,20 +52,22 @@ $(document).ready(function () {
   });
 });
 
-function openCity(evt, cityName) {
-  var i, tabcontent, tabcontent1, tablinks;
+function openCity(evt, idName) {
+  var i, tabcontent;
   tabcontent = document.getElementsByClassName("tabcontent");
   for (i = 0; i < tabcontent.length; i++) {
     tabcontent[i].style.display = "none";
   }
 
+  document.getElementById(idName).style.display = "block";
+}
+
+function openCity1(evt, idName) {
+  var i, tabcontent1;
+
   tabcontent1 = document.getElementsByClassName("tabcontent1");
   for (i = 0; i < tabcontent1.length; i++) {
     tabcontent1[i].style.display = "none";
   }
-  // tablinks = document.getElementsByClassName("tablinks");
-  // for (i = 0; i < tablinks.length; i++) {
-  //   tablinks[i].className = tablinks[i].className.replace(" active", "");
-  // }
-  document.getElementById(cityName).style.display = "block";
+  document.getElementById(idName).style.display = "block";
 }

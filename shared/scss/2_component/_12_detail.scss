@@ -1,3 +1,94 @@
 .c-detail {
-    &__link {}
+    margin-top: 67px;
+
+    .c-heading {
+        margin-bottom: 12px;
+    }
+
+    &__link {
+        padding: 12px 30px;
+        height: 56px;
+        line-height: 32px;
+        text-align: center;
+        color: #FFF;
+        font-weight: 400;
+        font-size: 2rem;
+        background-color: unset;
+        border: unset;
+        cursor: pointer;
+        transition: 0.3s;
+
+        &:not(:last-child) {
+            margin-right: 20px;
+        }
+
+        &.is-active {
+            font-weight: 700;
+            background: #18191D;
+            border-radius: 12px 12px 0px 0px;
+        }
+    }
+
+    .tabcontent1 {
+        width: 100%;
+        background: #18191D;
+        border-radius: 0px 12px 12px 12px;
+        padding: 30px 40px;
+
+        &.read-active {
+            .content {
+                max-height: max-content;
+            }
+        }
+
+        h3 {
+            font-weight: 700;
+            font-size: 2rem;
+            line-height: 2;
+            letter-spacing: -0.01em;
+        }
+
+        .content {
+            max-height: 308px;
+            margin-top: 12px;
+            margin-bottom: 45px;
+            font-size: 1.8rem;
+            line-height: 1.55;
+            color: #B1B5C3;
+            overflow: hidden;
+
+            * {
+                &:not(:last-child) {
+                    margin-bottom: 28px;
+                }
+            }
+        }
+
+        .readMore {
+            font-weight: 700;
+            line-height: 1;
+            text-align: center;
+
+
+            span {
+                position: relative;
+                cursor: pointer;
+                transition: .3s;
+
+                &:hover {
+                    opacity: .8;
+                }
+
+                &::after {
+                    content: '';
+                    position: absolute;
+                    width: 100%;
+                    height: 2px;
+                    background: #E5E5E5;
+                    left: 0;
+                    bottom: -4px;
+                }
+            }
+        }
+    }
 }

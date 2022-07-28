@@ -4,11 +4,25 @@ btn
 
 /*
 ------------------------------------------------------------*/
-.c-btn1 {
-  display: inline-block;
-  padding: 10px 50px;
-  font-size: 1.6rem;
-  border: 2px solid #fff;
-  border-radius: 20px;
-  line-height: 1;
+.c-btn {
+  background: #DC2219;
+  border-radius: 99px;
+
+  &--report {
+    width: 301px;
+    margin-top: 28px;
+    font-weight: 400;
+    line-height: 1;
+    text-align: center;
+    color: #FFFFFF;
+
+    a {
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      padding: 10px 20px;
+      display: flex;
+      gap: 10px;
+    }
+  }
 }
