@@ -133,6 +133,12 @@
         color: #FFF;
         outline: none;
         border: none;
+        cursor: pointer;
+        transition: .3s;
+
+        &:hover {
+            opacity: .7;
+        }
 
         @include mq(md, max) {
             font-size: 1.2rem;
