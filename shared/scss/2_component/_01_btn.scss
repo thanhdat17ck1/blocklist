@@ -16,6 +16,14 @@ btn
     text-align: center;
     color: #FFFFFF;
 
+    @include mq(md, max) {
+      font-size: 1.2rem;
+
+      img {
+        width: 12px;
+      }
+    }
+
     a {
       flex-direction: row;
       justify-content: center;

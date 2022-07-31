@@ -5,10 +5,15 @@
         margin-bottom: 12px;
     }
 
+    &__tab {
+        display: flex;
+        overflow-x: auto;
+    }
+
     &__link {
         padding: 12px 30px;
         height: 56px;
-        line-height: 32px;
+        line-height: 1.6;
         text-align: center;
         color: #FFF;
         font-weight: 400;
@@ -17,9 +22,23 @@
         border: unset;
         cursor: pointer;
         transition: 0.3s;
+        flex-shrink: 0;
+
+        @include mq(lg, max) {
+            padding: 12px 20px;
+            font-size: 1.8rem;
+        }
+
+        @include mq(md, max) {
+            font-size: 1.6rem;
+        }
 
         &:not(:last-child) {
             margin-right: 20px;
+
+            @include mq(lg, max) {
+                margin-right: 10px;
+            }
         }
 
         &.is-active {
@@ -35,6 +54,10 @@
         border-radius: 0px 12px 12px 12px;
         padding: 30px 40px;
 
+        @include mq(md, max) {
+            padding: 20px 30px;
+        }
+
         &.read-active {
             .content {
                 max-height: max-content;
@@ -46,6 +69,10 @@
             font-size: 2rem;
             line-height: 2;
             letter-spacing: -0.01em;
+
+            @include mq(md, max) {
+                font-size: 1.6rem;
+            }
         }
 
         .content {
@@ -56,6 +83,11 @@
             line-height: 1.55;
             color: #B1B5C3;
             overflow: hidden;
+
+            @include mq(md, max) {
+                font-size: 1.4rem;
+                margin-bottom: 30px;
+            }
 
             * {
                 &:not(:last-child) {
@@ -68,6 +100,10 @@
             font-weight: 700;
             line-height: 1;
             text-align: center;
+
+            @include mq(md, max) {
+                font-size: 1.2rem;
+            }
 
 
             span {

@@ -1,3 +1,77 @@
 .c-comment {
     margin-top: 60px;
+    margin-bottom: 209px;
+
+    @include mq(md, max) {
+        margin-bottom: 120px;
+    }
+
+    &__form {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin-top: 24px;
+
+        @include mq(md, max) {
+            gap: 10px 0;
+        }
+
+        .name {
+            width: calc(51% - 44px);
+        }
+
+        .email {
+            width: calc(48% - 44px);
+        }
+
+
+        .name,
+        .email {
+            @include mq(md, max) {
+                width: 100%;
+            }
+        }
+
+        textarea {
+            width: 100%;
+            margin-top: 16px;
+
+            @include mq(md, max) {
+                margin-top: 0;
+            }
+        }
+
+        >input,
+        >textarea {
+            border: 1px solid #23262F;
+            border-radius: 8px;
+            background: #222630;
+            padding: 9px 20px;
+            font-family: $main-fonts;
+            font-size: 18px;
+            line-height: 1.55;
+            color: #FFF;
+
+            ::placeholder {
+                font-family: $main-fonts;
+                font-size: 18px;
+                line-height: 1.55;
+                color: #777E90;
+
+                @include sp {
+                    font-size: 1.4rem;
+                }
+            }
+
+            @include sp {
+                width: calc(100% - 42px);
+                font-size: 1.4rem;
+            }
+        }
+
+        >textarea {
+            height: 102px;
+            resize: none;
+        }
+    }
 }

@@ -27,7 +27,7 @@ $(document).ready(function () {
     $(".tabcontent1.test .content").slideDown("slow");
 
     if ($(".tabcontent1").hasClass("read-active")) {
-      $(this).text("Show");
+      $(this).text("Close");
     } else {
       $(this).text("Read More");
     }

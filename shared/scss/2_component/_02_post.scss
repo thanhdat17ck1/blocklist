@@ -9,6 +9,10 @@
     justify-content: space-between;
   }
 
+  @include mq(lg, max) {
+    gap: 40px 27px;
+  }
+
   @include mq(md, max) {
     gap: 40px 0;
   }
@@ -97,7 +101,7 @@
       color: #777e90;
       font-weight: 400;
       font-size: 14px;
-      line-height: 24px;
+      line-height: 1.71;
 
       @include mq(md, max) {
         font-size: 1.2rem;

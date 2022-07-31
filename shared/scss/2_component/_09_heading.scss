@@ -3,34 +3,50 @@
 
     h2 {
         font-weight: 700;
-        font-size: 48px;
-        line-height: 56px;
+        font-size: 4.8rem;
+        line-height: 1.2;
         letter-spacing: -0.02em;
         text-transform: capitalize;
+
+        @include mq(md, max) {
+            font-size: 4rem;
+        }
     }
 
     h3 {
         font-weight: 700;
-        font-size: 24px;
-        line-height: 32px;
+        font-size: 2.4rem;
+        line-height: 1.35;
+
+        @include mq(md, max) {
+            font-size: 1.8rem;
+        }
     }
 
     p {
-        font-size: 20px;
-        line-height: 28px;
+        font-size: 2rem;
+        line-height: 1.4;
         letter-spacing: -0.01em;
         color: #B1B5C3;
         margin-top: 16px;
+
+        @include mq(md, max) {
+            font-size: 1.6rem;
+        }
     }
 
     span {
         font-weight: 400;
-        font-size: 16px;
-        line-height: 24px;
+        font-size: 1.6rem;
+        line-height: 1.5;
         text-align: center;
         text-transform: capitalize;
         color: #B1B5C3;
         margin-top: 15px;
         display: block;
+
+        @include mq(md, max) {
+            font-size: 1.2rem;
+        }
     }
 }

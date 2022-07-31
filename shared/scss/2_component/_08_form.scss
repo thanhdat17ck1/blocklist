@@ -2,6 +2,11 @@
     width: 690px;
     margin-left: auto;
     margin-right: auto;
+    position: relative;
+
+    @include sp {
+        width: 100%;
+    }
 
     &__row {
         margin-bottom: 28px;
@@ -12,6 +17,10 @@
                 color: #fd0000;
                 margin-top: 10px;
                 display: block;
+
+                @include mq(md, max) {
+                    font-size: 1.2rem;
+                }
             }
 
             input {
@@ -21,12 +30,16 @@
 
         >label {
             font-weight: 700;
-            font-size: 20px;
-            line-height: 28px;
+            font-size: 2rem;
+            line-height: 1.4;
             text-transform: capitalize;
             color: #B1B5C3;
             margin-bottom: 12px;
             display: block;
+
+            @include mq(md, max) {
+                font-size: 1.6rem;
+            }
         }
 
         >input,
@@ -37,15 +50,24 @@
             background: #222630;
             padding: 9px 20px;
             font-family: $main-fonts;
-            font-size: 18px;
-            line-height: 28px;
+            font-size: 1.8rem;
+            line-height: 1.55;
             color: #FFF;
+
+            @include mq(md, max) {
+                font-size: 1.4rem;
+                width: calc(100% - 42px);
+            }
 
             ::placeholder {
                 font-family: $main-fonts;
-                font-size: 18px;
-                line-height: 28px;
+                font-size: 1.8rem;
+                line-height: 1.55;
                 color: #777E90;
+
+                @include mq(md, max) {
+                    font-size: 1.4rem;
+                }
             }
         }
 
@@ -58,6 +80,10 @@
             margin-top: 54px;
             margin-bottom: 255px;
             text-align: center;
+
+            @include sp {
+                margin-bottom: 150px;
+            }
 
             .check-radio {
                 justify-content: center;
@@ -79,7 +105,7 @@
             width: 690px;
             height: 48px;
             font-size: 18px;
-            line-height: 28px;
+            line-height: 1.55;
             color: #FFFFFF;
             display: flex;
             justify-content: center;
@@ -87,6 +113,11 @@
             gap: 12px;
             font-weight: 400;
             cursor: pointer;
+
+            @include mq(md, max) {
+                font-size: 1.4rem;
+                width: 100%;
+            }
         }
     }
 
@@ -98,10 +129,15 @@
         margin-top: 7px;
         margin-bottom: 0 !important;
         font-weight: 700;
-        font-size: 16px;
+        font-size: 1.6rem;
         color: #FFF;
         outline: none;
         border: none;
+
+        @include mq(md, max) {
+            font-size: 1.2rem;
+            height: 42px;
+        }
     }
 
     .check-radio {
@@ -111,6 +147,10 @@
         padding: 0px;
         gap: 60px;
         margin-top: 23px;
+
+        @include mq(md, max) {
+            gap: 60px 30px;
+        }
     }
 }
 
@@ -119,10 +159,14 @@
     position: relative;
     cursor: pointer;
     user-select: none;
-    font-size: 18px;
-    line-height: 28px;
+    font-size: 1.8rem;
+    line-height: 1.55;
     color: #777E90;
     padding-left: 32px;
+
+    @include mq(md, max) {
+        font-size: 1.4rem;
+    }
 }
 
 .container input {

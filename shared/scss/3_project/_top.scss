@@ -33,7 +33,6 @@ Css of home page
     }
 
     @include mq(sm, max) {
-      max-width: calc(100% - 40px);
       margin-left: auto;
       margin-right: auto;
       font-size: 3rem;
@@ -46,8 +45,8 @@ Css of home page
     margin-top: 43px;
     width: 367px;
 
-    @include mq(sm, max) {
-      max-width: calc(100% - 40px);
+    @include mq(xs, max) {
+      width: 100%;
     }
   }
 
@@ -59,7 +58,6 @@ Css of home page
     }
 
     @include mq(sm, max) {
-      max-width: calc(100% - 40px);
       margin-left: auto;
       margin-right: auto;
     }
@@ -72,15 +70,11 @@ Css of home page
     }
 
     @include mq(lg, max) {
-      max-width: calc(100% - 80px);
+      max-width: calc(100% - 40px);
     }
 
     @include mq(md, max) {
-      max-width: calc(100% - 80px);
-    }
-
-    @include mq(sm, max) {
-      max-width: calc(100% - 40px);
+      max-width: 100%;
     }
   }
 
@@ -90,26 +84,54 @@ Css of home page
 .p-search {
   margin-bottom: 137px;
 
+  &__right {
+    @include mq(xl, max) {
+      margin-top: 70px;
+    }
+  }
+
   .l-container {
     display: flex;
     justify-content: space-between;
     margin-top: 31px;
+
+    @include mq(tab, max) {
+      flex-direction: column;
+    }
   }
 
   .c-form-search {
     width: 360px;
+
+    @include mq(xs, max) {
+      width: 100%;
+    }
   }
 
   &__left {
     width: calc(100% - 342px);
     padding-right: 126px;
 
+    @include mq(xll, max) {
+      padding-right: 100px;
+    }
+
+    @include mq(xl, max) {
+      width: calc(100% - 300px);
+      padding-right: 60px;
+    }
+
+    @include mq(tab, max) {
+      width: 100%;
+      padding-right: 0;
+    }
+
     &__content {
       margin-top: 27px;
 
       .results {
         font-weight: 700;
-        line-height: 24px;
+        line-height: 1.5;
       }
 
       .c-news {
@@ -168,6 +190,8 @@ Css of home page
 }
 
 .p-project {
+  margin-bottom: 50px;
+
   .c-heading {
     text-align: left;
   }

@@ -1,22 +1,27 @@
-.c-profile {
-    display: flex;
+.c-project {
+    margin-top: 50px;
+
+    &__list {
+        margin-top: 22px;
+        display: grid;
+        grid-template-columns: auto auto;
+
+        @include mq(lg, max) {
+            grid-template-columns: auto;
+            gap: 25px 0;
+        }
+    }
+
+    &__item {
+        display: flex;
+    }
 
     &__avata {
         border-radius: 16px;
         overflow: hidden;
-        width: 210px;
-        height: 210px;
+        width: 100px;
+        height: 100px;
         flex-shrink: 0;
-
-        @include mq(md, max) {
-            width: 140px;
-            height: 140px;
-        }
-
-        @include mq(xs, max) {
-            width: 120px;
-            height: 120px;
-        }
 
         img {
             width: 100%;
@@ -26,8 +31,8 @@
     }
 
     &__info {
-        margin-left: 30px;
-        max-width: 565px;
+        margin-left: 24px;
+        padding-top: 12px;
 
         @include mq(md, max) {
             margin-left: 15px;
@@ -38,10 +43,6 @@
         display: flex;
         align-items: center;
         margin-bottom: 17px;
-
-        @include mq(md, max) {
-            margin-bottom: 10px;
-        }
 
         span {
             display: flex;
@@ -68,7 +69,7 @@
 
         p {
             font-weight: 700;
-            font-size: 24px;
+            font-size: 2.4rem;
             line-height: 1.35;
             margin-left: 15px;
 
@@ -90,19 +91,6 @@
         line-height: 1.5;
         color: #B1B5C3;
         margin-top: 12px;
-
-        display: block;
-        max-height: 48px;
-        -webkit-line-clamp: 2;
-        -webkit-box-orient: vertical;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        white-space: normal;
-        display: -webkit-box;
-
-        @include mq(md, max) {
-            margin-top: 7px;
-        }
     }
 
     &__achievements {
@@ -111,15 +99,6 @@
 
         .item {
             padding: 0px 60px;
-            flex-shrink: 0;
-
-            @include mq(tab, max) {
-                padding: 0px 40px;
-            }
-
-            @include mq(lg, max) {
-                padding: 0px 25px;
-            }
 
             &:not(:last-child) {
                 border-right: 1px solid #B1B5C3;
