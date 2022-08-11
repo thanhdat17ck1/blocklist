@@ -7,6 +7,23 @@ $(document).ready(function () {
     $(".c-detail__link").removeClass("is-active");
     $(this).addClass("is-active");
   });
+
+  //search
+  $("#search").on("keyup", function () {
+    var input, filter, item, a, i, txtValue;
+    input = document.getElementById("search");
+    filter = input.value.toUpperCase();
+    item = document.getElementsByClassName("c-post__item");
+    for (i = 0; i < item.length; i++) {
+      a = item[i].getElementsByClassName("c-post__info")[0];
+      txtValue = a.textContent || a.innerText;
+      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+        item[i].style.display = "";
+      } else {
+        item[i].style.display = "none";
+      }
+    }
+  });
 });
 
 $(document).ready(function () {
@@ -52,7 +69,7 @@ $(document).ready(function () {
   });
 });
 
-function openCity(evt, idName) {
+function tab(evt, idName) {
   var i, tabcontent;
   tabcontent = document.getElementsByClassName("tabcontent");
   for (i = 0; i < tabcontent.length; i++) {
@@ -62,7 +79,7 @@ function openCity(evt, idName) {
   document.getElementById(idName).style.display = "block";
 }
 
-function openCity1(evt, idName) {
+function tab1(evt, idName) {
   var i, tabcontent1;
 
   tabcontent1 = document.getElementsByClassName("tabcontent1");
