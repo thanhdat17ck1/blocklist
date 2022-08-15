@@ -67,6 +67,14 @@ $(document).ready(function () {
     $("body").toggleClass("is-active");
     $(".c-header__logo").toggleClass("is-active");
   });
+
+  //get uploaded file name in js
+  $('input[type="file"]').change(function (e) {
+    var fileName = e.target.files[0].name;
+    console.log(fileName);
+    $(e.target).parent(".c-form__row").find(".name-file").html(fileName);
+    // Inside find search element where the name should display (by Id Or Class)
+  });
 });
 
 function tab(evt, idName) {
