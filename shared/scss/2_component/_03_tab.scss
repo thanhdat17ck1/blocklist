@@ -3,6 +3,10 @@
   justify-content: center;
   margin-bottom: 40px;
 
+  @include mq(sm,max) {
+    flex-direction: column;
+  }
+
   &__link {
     height: 32px;
     line-height: 32px;
@@ -15,6 +19,11 @@
     margin: 0 5px;
     font-weight: 700;
     font-size: 1.4rem;
+    
+    @include mq(sm,max) {
+      width: max-content;
+      margin: 0 auto;
+    }
 
     &.is-active {
       background: #dc2219;

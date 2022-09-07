@@ -1,0 +1,30 @@
+.help-customers {
+    width: max-content;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 18px;
+    &__above {
+        display: flex;
+
+        a {
+            font-size: 1.4rem;
+            color: #B1B5C3;
+            font-weight: 700;
+
+            + a {
+                margin-left: 27px;
+            }
+        }
+    }
+
+    button {
+        background: #dc2219;
+        cursor: pointer;
+        border: unset;
+        color: #FFF;
+        height: 36px;
+        width: 100%;
+        border-radius: 99px;
+        margin-top: 17px;
+    }
+}

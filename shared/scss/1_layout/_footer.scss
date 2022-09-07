@@ -30,6 +30,9 @@ footer
     padding-top: 58px;
     padding-bottom: 52px;
 
+    @include mq(xl,max) {
+      width: 35%;
+    }
     @include mq(md, max) {
       width: 100%;
       padding-top: 40px;
@@ -40,7 +43,6 @@ footer
   &__social {
     display: flex;
     margin-top: 18px;
-    margin-left: 7px;
 
     @include mq(md, max) {
       justify-content: center;
@@ -76,6 +78,9 @@ footer
     align-items: center;
     justify-content: center;
 
+    @include mq(xl,max) {
+      width: 30%;
+    }
     @include mq(md, max) {
       width: 100%;
       border-left: unset;
@@ -88,11 +93,11 @@ footer
     ul {
       display: grid;
       grid-template-columns: auto auto;
-      grid-gap: 7px 47%;
-      padding-left: 23%;
+      grid-gap: 7px 7%;
+      padding-left: 10%;
 
       @include mq(xl, max) {
-        grid-gap: 7px 25%;
+        // grid-gap: 7px 25%;
         padding-left: 40px;
       }
 

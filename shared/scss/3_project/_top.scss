@@ -6,7 +6,7 @@ Css of home page
   background: url("./../images/home/bg.png") no-repeat center;
   background-size: contain;
   background-position-y: 102px;
-  margin-bottom: 110px;
+  margin-bottom: 48px;
 
   @include mq(md, max) {
     margin-bottom: 70px;
@@ -42,16 +42,16 @@ Css of home page
   .c-form-search {
     margin-left: auto;
     margin-right: auto;
-    margin-top: 43px;
-    width: 367px;
+    margin-top: 23px;
+    width: 459px;
 
-    @include mq(xs, max) {
-      width: 100%;
+    @include mq(sm, max) {
+      width: 330px;
     }
   }
 
   .c-tab {
-    margin-top: 108px;
+    margin-top: 83px;
 
     @include mq(md, max) {
       margin-top: 60px;
